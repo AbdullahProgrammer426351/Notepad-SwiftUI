@@ -8,60 +8,52 @@
 import Foundation
 import CoreData
 
-
-class NotepadDataModel:ObservableObject{
-    let contanier : NSPersistentContainer
-    @Published var saveNoteEntity:[Note] = []
-    
+class NotepadDataModel: ObservableObject {
+    let container: NSPersistentContainer
+    @Published var saveNoteEntity: [Note] = []
     
     init() {
-        contanier = NSPersistentContainer(name:"NotepadDB")
-        contanier.loadPersistentStores{(descrip,errer) in
-            if let errer = errer{
-                print("Error loading data \(errer)")
+        container = NSPersistentContainer(name: "NotepadDB")
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                print("Error loading data \(error)")
             }
         }
         fetchData()
     }
     
-    
-    func fetchData(){
-        let request = NSFetchRequest<Note>(entityName:"Note")
+    func fetchData() {
+        let request = NSFetchRequest<Note>(entityName: "Note")
         
-        do{
-            saveNoteEntity = try contanier.viewContext.fetch(request)
-        }catch let error{
+        do {
+            saveNoteEntity = try container.viewContext.fetch(request)
+        } catch {
             print("Error fetching data \(error)")
         }
     }
     
-    
-    func addNote(body:String){
-        let newNote = Note(context: contanier.viewContext)
-        
+    func addNote(body: String) {
+        let newNote = Note(context: container.viewContext)
         newNote.body = body
-        
         saveData()
     }
     
     func deleteNote(note: Note) {
-            contanier.viewContext.delete(note)
-            saveData()
-        }
-
-        func updateNote(note: Note, newBody: String) {
-            note.body = newBody
-
-            saveData()
-        }
-    
-    func saveData(){
-        do{
-            try contanier.viewContext.save()
-            fetchData()
-        }catch{
-            print("Error in saving data \(error)")
-        }
+        container.viewContext.delete(note)
+        saveData()
     }
     
+    func updateNote(note: Note, newBody: String) {
+        note.body = newBody
+        saveData()
+    }
+    
+    private func saveData() {
+        do {
+            try container.viewContext.save()
+            fetchData()  // Ensure data is fetched after saving
+        } catch {
+            print("Error saving data \(error)")
+        }
+    }
 }
