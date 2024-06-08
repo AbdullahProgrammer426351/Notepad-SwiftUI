@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NotepadApp: App {
+    @StateObject var vm:NotepadDataModel = NotepadDataModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(NotepadDataModel())
         }
     }
 }

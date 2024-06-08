@@ -14,6 +14,11 @@
 		226DF3472C14689500537CE2 /* NotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DF3462C14689500537CE2 /* NotepadTests.swift */; };
 		226DF3512C14689500537CE2 /* NotepadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DF3502C14689500537CE2 /* NotepadUITests.swift */; };
 		226DF3532C14689500537CE2 /* NotepadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DF3522C14689500537CE2 /* NotepadUITestsLaunchTests.swift */; };
+		226DF3612C1469E400537CE2 /* NotepadDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 226DF35F2C1469E400537CE2 /* NotepadDB.xcdatamodeld */; };
+		226DF3632C146A6300537CE2 /* NotepadDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DF3622C146A6300537CE2 /* NotepadDataModel.swift */; };
+		226DF3652C146C5100537CE2 /* AddNoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DF3642C146C5100537CE2 /* AddNoteScreen.swift */; };
+		226DF3672C146DB100537CE2 /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DF3662C146DB100537CE2 /* NormalButton.swift */; };
+		226DF3692C1470FB00537CE2 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DF3682C1470FB00537CE2 /* NoteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		226DF34C2C14689500537CE2 /* NotepadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotepadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		226DF3502C14689500537CE2 /* NotepadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadUITests.swift; sourceTree = "<group>"; };
 		226DF3522C14689500537CE2 /* NotepadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		226DF3602C1469E400537CE2 /* NotepadDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotepadDB.xcdatamodel; sourceTree = "<group>"; };
+		226DF3622C146A6300537CE2 /* NotepadDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadDataModel.swift; sourceTree = "<group>"; };
+		226DF3642C146C5100537CE2 /* AddNoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteScreen.swift; sourceTree = "<group>"; };
+		226DF3662C146DB100537CE2 /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
+		226DF3682C1470FB00537CE2 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,11 @@
 				226DF3372C14689100537CE2 /* ContentView.swift */,
 				226DF3392C14689400537CE2 /* Assets.xcassets */,
 				226DF33B2C14689400537CE2 /* Preview Content */,
+				226DF35F2C1469E400537CE2 /* NotepadDB.xcdatamodeld */,
+				226DF3622C146A6300537CE2 /* NotepadDataModel.swift */,
+				226DF3642C146C5100537CE2 /* AddNoteScreen.swift */,
+				226DF3662C146DB100537CE2 /* NormalButton.swift */,
+				226DF3682C1470FB00537CE2 /* NoteCell.swift */,
 			);
 			path = Notepad;
 			sourceTree = "<group>";
@@ -258,7 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				226DF3382C14689100537CE2 /* ContentView.swift in Sources */,
+				226DF3612C1469E400537CE2 /* NotepadDB.xcdatamodeld in Sources */,
+				226DF3672C146DB100537CE2 /* NormalButton.swift in Sources */,
+				226DF3652C146C5100537CE2 /* AddNoteScreen.swift in Sources */,
 				226DF3362C14689100537CE2 /* NotepadApp.swift in Sources */,
+				226DF3692C1470FB00537CE2 /* NoteCell.swift in Sources */,
+				226DF3632C146A6300537CE2 /* NotepadDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +608,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		226DF35F2C1469E400537CE2 /* NotepadDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				226DF3602C1469E400537CE2 /* NotepadDB.xcdatamodel */,
+			);
+			currentVersion = 226DF3602C1469E400537CE2 /* NotepadDB.xcdatamodel */;
+			name = NotepadDB.xcdatamodeld;
+			path = "/Users/SwiftUIPracticeProjects/Himself Projects/Notepad/Notepad/NotepadDB.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 226DF32A2C14689100537CE2 /* Project object */;
 }
